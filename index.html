@@ -14,22 +14,24 @@
         <div class="container">
             <h1 class="text-center">Tarot A day</h1>
 
-            <button class="btn btn-primary btn-lg btn-block" @click="getCard" type="button">Get a Card</button>
+            <button class="btn btn-success btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
 
             <hr>
-                <div class="card">
-                    <div class="card-header">
-                        <strong>Meaning</strong>: {{ chosenCard.interpretation }}
-                    </div>
-                    <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ chosenCard.name }}</h5>
-                        <p class="card-text">{{ chosenCard.description }}</p>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <strong>Suite:</strong> {{ chosenCard.suite }}
-                    </div>
+            <div class="card text-center">
+                <h2 class="card-title">{{ chosenCard.name }}</h2>
+                <img :src="chosenCard.image" class="shadow card-img-top rounded mx-auto d-block" :alt="chosenCard.name">
+
+
+                <div class="card-body">
+                    <h4>Meaning</h4> {{ chosenCard.interpretation }}
+                    <p class="card-text">
+                    <h4>Description</h4>
+                    {{ chosenCard.description }}</p>
                 </div>
+                <div class="card-footer text-muted">
+                    <strong>Suite:</strong> {{ chosenCard.suite }}
+                </div>
+            </div>
         </div>
     </div>
 
@@ -41,6 +43,7 @@
     .card-img-top {
         width: 20rem;
     }
+
     .fade-enter-active,
     .fade-leave-active {
         transition: opacity .5s;
