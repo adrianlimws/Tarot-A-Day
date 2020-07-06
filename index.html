@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="vue.js"></script>
     <title>Tarot A Day - VueJS mini project</title>
 </head>
+
 <body>
-    
-    <script src="vue.js"></script>
+    <div id="app">
+        <div class="container">
+            <h1 class="text-center">Tarot A day</h1>
+
+            <button class="btn btn-primary btn-lg btn-block" @click="getCard" type="button">Get a Card</button>
+
+            <div class="card text-center">
+                <div class="card-header">
+                  <strong>Meaning</strong>: {{ chosenCard.interpretation }}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ chosenCard.name }}</h5>
+                  <p class="card-text">{{ chosenCard.description }}</p>
+                </div>
+                <div class="card-footer text-muted">
+                 <strong>Suite:</strong> {{ chosenCard.suite }}
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
