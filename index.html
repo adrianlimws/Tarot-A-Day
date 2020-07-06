@@ -17,25 +17,42 @@
             <button class="btn btn-primary btn-lg btn-block" @click="getCard" type="button">Get a Card</button>
 
             <hr>
-
-            <div class="card">
-                <div class="card-header">
-                  <strong>Meaning</strong>: {{ chosenCard.interpretation }}
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Meaning</strong>: {{ chosenCard.interpretation }}
+                    </div>
+                    <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ chosenCard.name }}</h5>
+                        <p class="card-text">{{ chosenCard.description }}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <strong>Suite:</strong> {{ chosenCard.suite }}
+                    </div>
                 </div>
-                <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name" >
-                <div class="card-body">
-                  <h5 class="card-title">{{ chosenCard.name }}</h5>
-                  <p class="card-text">{{ chosenCard.description }}</p>
-                </div>
-                <div class="card-footer text-muted">
-                 <strong>Suite:</strong> {{ chosenCard.suite }}
-                </div>
-              </div>
         </div>
     </div>
 
     <script src="main.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+
+<style>
+    .card-img-top {
+        width: 20rem;
+    }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter,
+    .fade-leave-to
+
+    /* .fade-leave-active below version 2.1.8 */
+        {
+        opacity: 0;
+    }
+</style>
 
 </html>

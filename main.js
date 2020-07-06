@@ -2,7 +2,7 @@ var app = new Vue({
     el: "#app",
     data: {
         cards: [
-	{
+	    {
 		"name": "The Fool",
 		"suite": "major",
 		"image": "deck/RWS_Tarot_00_Fool.jpg",
@@ -547,14 +547,14 @@ var app = new Vue({
 		"image": "deck/Pents01.jpg",
 		"description": "A hand--issuing, as usual, from a cloud--holds up a pentacle.",
 		"interpretation": "Perfect contentment, felicity, ecstasy; also speedy intelligence; gold. Reversed: The evil side of wealth, bad intelligence; also great riches. In any case it shews prosperity, comfortable material conditions, but whether these are of advantage to the possessor will depend on whether the card is reversed or not."
-	}
-    ],
-    chosenCard: ''
-    },
-    methods : {
-        getCard() {
-            var chosenCard = Math.floor(Math.random() * this.cards.length);
-            this.chosenCard = this.cards[chosenCard];
+	    }
+        ],
+        chosenCard: ''
+        },
+        methods : {
+            getCard() {
+                var chosenCard = Math.floor(Math.random() * this.cards.length);
+                this.chosenCard = this.cards[chosenCard];
+            }
         }
-    }
   })
