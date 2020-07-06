@@ -18,10 +18,11 @@
 
             <hr>
 
-            <div class="card text-center">
+            <div class="card">
                 <div class="card-header">
                   <strong>Meaning</strong>: {{ chosenCard.interpretation }}
                 </div>
+                <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name" >
                 <div class="card-body">
                   <h5 class="card-title">{{ chosenCard.name }}</h5>
                   <p class="card-text">{{ chosenCard.description }}</p>

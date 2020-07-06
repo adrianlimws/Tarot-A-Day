@@ -453,98 +453,98 @@ var app = new Vue({
 	{
 		"name": "King of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles14.jpg",
+		"image": "deck/Pents14.jpg",
 		"description": "The figure calls for no special description the face is rather dark, suggesting also courage, but somewhat lethargic in tendency. The bull's head should be noted as a recurrent symbol on the throne. The sign of this suit is represented throughout as engraved or blazoned with the pentagram, typifying the correspondence of the four elements in human nature and that by which they may be governed. In many old Tarot packs this suit stood for current coin, money, deniers. I have not invented the substitution of pentacles and I have no special cause to sustain in respect of the alternative. But the consensus of divinatory meanings is on the side of some change, because the cards do not happen to deal especially with questions of money.",
 		"interpretation": "Valour, realizing intelligence, business and normal intellectual aptitude, sometimes mathematical gifts and attainments of this kind; success in these paths. Reversed: Vice, weakness, ugliness, perversity, corruption, peril."
 	},
 	{
 		"name": "Queen of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles13.jpg",
+		"image": "deck/Pents13.jpg",
 		"description": "The face suggests that of a dark woman, whose qualities might be summed up in the idea of greatness of soul; she has also the serious cast of intelligence; she contemplates her symbol and may see worlds therein.",
 		"interpretation": "Opulence, generosity, magnificence, security, liberty. Reversed: Evil, suspicion, suspense, fear, mistrust."
 	},
 	{
 		"name": "Knight of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles12.jpg",
+		"image": "deck/Pents12.jpg",
 		"description": "He rides a slow, enduring, heavy horse, to which his own aspect corresponds. He exhibits his symbol, but does not look therein.",
 		"interpretation": "Utility, serviceableness, interest, responsibility, rectitude-all on the normal and external plane. Reversed: inertia, idleness, repose of that kind, stagnation; also placidity, discouragement, carelessness."
 	},
 	{
 		"name": "Page of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles11.jpg",
+		"image": "deck/Pents11.jpg",
 		"description": "A youthful figure, looking intently at the pentacle which hovers over his raised hands. He moves slowly, insensible of that which is about him.",
 		"interpretation": "Application, study, scholarship, reflection another reading says news, messages and the bringer thereof; also rule, management. Reversed: Prodigality, dissipation, liberality, luxury; unfavourable news."
 	},
 	{
 		"name": "Ten of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles10.jpg",
+		"image": "deck/Pents10.jpg",
 		"description": "A man and woman beneath an archway which gives entrance to a house and domain. They are accompanied by a child, who looks curiously at two dogs accosting an ancient personage seated in the foreground. The child's hand is on one of them.",
 		"interpretation": "Gain, riches; family matters, archives, extraction, the abode of a family. Reversed: Chance, fatality, loss, robbery, games of hazard; sometimes gift, dowry, pension."
 	},
 	{
 		"name": "Nine of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles09.jpg",
+		"image": "deck/Pents09.jpg",
 		"description": "A woman, with a bird upon her wrist, stands amidst a great abundance of grapevines in the garden of a manorial house. It is a wide domain, suggesting plenty in all things. Possibly it is her own possession and testifies to material well-being.",
 		"interpretation": "Prudence, safety, success, accomplishment, certitude, discernment. Reversed: Roguery, deception, voided project, bad faith."
 	},
 	{
 		"name": "Eight of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles08.jpg",
+		"image": "deck/Pents08.jpg",
 		"description": "An artist in stone at his work, which he exhibits in the form of trophies.",
 		"interpretation": "Work, employment, commission, craftsmanship, skill in craft and business, perhaps in the preparatory stage. Reversed: Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue."
 	},
 	{
 		"name": "Seven of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles07.jpg",
+		"image": "deck/Pents07.jpg",
 		"description": "A young man, leaning on his staff, looks intently at seven pentacles attached to a clump of greenery on his right; one would say that these were his treasures and that his heart was there.",
 		"interpretation": "These are exceedingly contradictory; in the main, it is a card of money, business, barter; but one reading gives altercation, quarrels--and another innocence, ingenuity, purgation. Reversed: Cause for anxiety regarding money which it may be proposed to lend."
 	},
 	{
 		"name": "Six of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles06.jpg",
+		"image": "deck/Pents06.jpg",
 		"description": "A person in the guise of a merchant weighs money in a pair of scales and distributes it to the needy and distressed. It is a testimony to his own success in life, as well as to his goodness of heart.",
 		"interpretation": "Presents, gifts, gratification another account says attention, vigilance now is the accepted time, present prosperity, etc. Reversed: Desire, cupidity, envy, jealousy, illusion."
 	},
 	{
 		"name": "Five of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles05.jpg",
+		"image": "deck/Pents05.jpg",
 		"description": "Two mendicants in a snow-storm pass a lighted casement.",
 		"interpretation": "The card foretells material trouble above all, whether in the form illustrated--that is, destitution--or otherwise. For some cartomancists, it is a card of love and lovers-wife, husband, friend, mistress; also concordance, affinities. These alternatives cannot be harmonized. Reversed: Disorder, chaos, ruin, discord, profligacy."
 	},
 	{
 		"name": "Four of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles04.jpg",
+		"image": "deck/Pents04.jpg",
 		"description": "A crowned figure, having a pentacle over his crown, clasps another with hands and arms; two pentacles are under his feet. He holds to that which he has.",
 		"interpretation": "The surety of possessions, cleaving to that which one has, gift, legacy, inheritance. Reversed: Suspense, delay, opposition."
 	},
 	{
 		"name": "Three of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles03.jpg",
+		"image": "deck/Pents03.jpg",
 		"description": "A sculptor at his work in a monastery. Compare the design which illustrates the Eight of Pentacles. The apprentice or amateur therein has received his reward and is now at work in earnest.",
 		"interpretation": "Metier, trade, skilled labour; usually, however, regarded as a card of nobility, aristocracy, renown, glory. Reversed: Mediocrity, in work and otherwise, puerility, pettiness, weakness."
 	},
 	{
 		"name": "Two of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles02.jpg",
+		"image": "deck/Pents02.jpg",
 		"description": "A young man, in the act of dancing, has a pentacle in either hand, and they are joined by that endless cord which is like the number 8 reversed.",
 		"interpretation": "On the one hand it is represented as a card of gaiety, recreation and its connexions, which is the subject of the design; but it is read also as news and messages in writing, as obstacles, agitation, trouble, embroilment. Reversed: Enforced gaiety, simulated enjoyment, literal sense, handwriting, composition, letters of exchange."
 	},
 	{
 		"name": "Ace of Pentacles",
 		"suite": "Pentacles",
-		"image": "deck/Pentacles01.jpg",
+		"image": "deck/Pents01.jpg",
 		"description": "A hand--issuing, as usual, from a cloud--holds up a pentacle.",
 		"interpretation": "Perfect contentment, felicity, ecstasy; also speedy intelligence; gold. Reversed: The evil side of wealth, bad intelligence; also great riches. In any case it shews prosperity, comfortable material conditions, but whether these are of advantage to the possessor will depend on whether the card is reversed or not."
 	}
