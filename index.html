@@ -20,10 +20,12 @@
             <div class="card text-center">
                 <h2 class="card-title">{{ chosenCard.name }}</h2>
                 <img :src="chosenCard.image" class="shadow card-img-top rounded mx-auto d-block" :alt="chosenCard.name">
-
-
                 <div class="card-body">
-                    <h4>Meaning</h4> {{ chosenCard.interpretation }}
+                    <span> <strong>Upright :</strong> {{ chosenCard.uprightKeywords }} </span>
+                    <p> {{ chosenCard.upright }} </p>
+                    <span> <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }} </span>
+                    <p> {{ chosenCard.reversed }} </p>
+
                     <p class="card-text">
                     <h4>Description</h4>
                     {{ chosenCard.description }}</p>
