@@ -12,46 +12,52 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1 class="text-center">Tarot A day</h1>
+            <h1 class="title text-center">Tarot A day</h1>
 
-            <button class="btn btn-success btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
+            <button class="btn btn-info btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
 
             <hr>
             <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
-                    <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
-                    <div class="card-body">
-                        <span> <strong>Upright :</strong> {{ chosenCard.uprightKeywords }} </span>
+                <div class="col-sm-4 ">
+                    <div class="card reading">
+                        <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
+                        <div class="card-body">
                             <hr>
-                        <span> <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }} </span>
+                            <span> <strong>Upright :</strong> {{ chosenCard.uprightKeywords }} </span>
+                            <hr>
+                            <span> <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }} </span>
+                            <hr>
+                        </div>
                     </div>
-                  </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="card text-center">
-                    <h2 class="card-title">{{ chosenCard.name }}</h2>
-                    
-                    <div class="card-body">
-                        <p class="card-text">
-                        <h5>Description</h5>
-                        <hr>
-                        {{ chosenCard.description }}</p>
-                        <p class="card-text">
+                </div>
+                <div class="col-sm-8">
+                    <div class="card text-center reading">
+                        <h2 class="card-title">{{ chosenCard.name }}</h2>
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <hr>
+                            <h5>Description</h5>
+                            <hr>
+                            {{ chosenCard.description }}</p>
+                            <hr>
+                            <p class="card-text">
                             <h5>Upright Meaning</h5>
                             <hr>
                             {{ chosenCard.upright }} </p>
-                        <p class="card-text">
+                            <hr>
+                            <p class="card-text">
                             <h5>Reversed Meaning</h5>
+
                             <hr>
                             {{ chosenCard.reversed }} </p>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <strong>Suite:</strong> {{ chosenCard.suite }}
+                        </div>
+                        <div class="card-footer text-muted">
+                            <strong>Suite:</strong> {{ chosenCard.suite }}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 
@@ -60,8 +66,24 @@
 </body>
 
 <style>
+    html,
+    body {
+        background: url("./img/background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .title {
+        color: azure;
+    }
+
     .card-img-top {
-        width: 18rem;
+        width: auto;
+    }
+
+    .reading {
+        background-color: antiquewhite;
     }
 </style>
 
