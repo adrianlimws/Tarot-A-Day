@@ -23,16 +23,17 @@
                         <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
                         <div class="card-body">
                             <hr>
-                            <span> <strong>Upright :</strong> {{ chosenCard.uprightKeywords }} </span>
+                            <strong>Upright :</strong> {{ chosenCard.uprightKeywords }}
                             <hr>
-                            <span> <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }} </span>
+                           <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }}
                             <hr>
+                            <strong>Suite:</strong> {{ chosenCard.suite }}
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <div class="card text-center reading">
-                        <h2 class="card-title">{{ chosenCard.name }}</h2>
+                        <h1 class="card-title">{{ chosenCard.name }}</h2>
 
                         <div class="card-body">
                             <p class="card-text">
@@ -52,8 +53,8 @@
                             <hr>
                             {{ chosenCard.reversed }} </p>
                         </div>
-                        <div class="card-footer text-muted">
-                            <strong>Suite:</strong> {{ chosenCard.suite }}
+                        <div class="card-footer reading">
+                            Tarot A Day - Made by Adrian Matsumoto
                         </div>
                     </div>
                 </div>
@@ -82,8 +83,9 @@
         width: auto;
     }
 
-    .reading {
-        background-color: antiquewhite;
+    .reading, h1, h5, p {
+        color: rgba(250, 250, 250, 0.884);
+        background-color: transparent;
     }
 </style>
 
