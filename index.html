@@ -17,23 +17,41 @@
             <button class="btn btn-success btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
 
             <hr>
-            <div class="card text-center">
-                <h2 class="card-title">{{ chosenCard.name }}</h2>
-                <img :src="chosenCard.image" class="shadow card-img-top rounded mx-auto d-block" :alt="chosenCard.name">
-                <div class="card-body">
-                    <span> <strong>Upright :</strong> {{ chosenCard.uprightKeywords }} </span>
-                    <p> {{ chosenCard.upright }} </p>
-                    <span> <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }} </span>
-                    <p> {{ chosenCard.reversed }} </p>
-
-                    <p class="card-text">
-                    <h4>Description</h4>
-                    {{ chosenCard.description }}</p>
-                </div>
-                <div class="card-footer text-muted">
-                    <strong>Suite:</strong> {{ chosenCard.suite }}
+            <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
+                    <div class="card-body">
+                        <span> <strong>Upright :</strong> {{ chosenCard.uprightKeywords }} </span>
+                            <hr>
+                        <span> <strong>Reversed :</strong>{{ chosenCard.reversedKeywords }} </span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="card text-center">
+                    <h2 class="card-title">{{ chosenCard.name }}</h2>
+                    
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5>Description</h5>
+                        <hr>
+                        {{ chosenCard.description }}</p>
+                        <p class="card-text">
+                            <h5>Upright Meaning</h5>
+                            <hr>
+                            {{ chosenCard.upright }} </p>
+                        <p class="card-text">
+                            <h5>Reversed Meaning</h5>
+                            <hr>
+                            {{ chosenCard.reversed }} </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <strong>Suite:</strong> {{ chosenCard.suite }}
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
@@ -43,20 +61,7 @@
 
 <style>
     .card-img-top {
-        width: 20rem;
-    }
-
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity .5s;
-    }
-
-    .fade-enter,
-    .fade-leave-to
-
-    /* .fade-leave-active below version 2.1.8 */
-        {
-        opacity: 0;
+        width: 18rem;
     }
 </style>
 
