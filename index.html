@@ -24,15 +24,15 @@
                         <h1>~ {{ chosenCard.name }} ~</h2>
                             <hr>
                             <div class="col">
-                                <strong>~ Upright ~</strong>
+                                <strong>~ Suite ~</strong>
                                 <br>
-                                <h5>{{ chosenCard.uprightKeywords }}</h5>
+                                <h5>{{ chosenCard.suite }}</h5>
                             </div>
                             <div class="col">
-                                <strong>~ Reversed ~</strong>
+                                <strong>~ Keywords ~</strong>
                                 <br>
                                 <h5>
-                                    {{ chosenCard.reversedKeywords }}
+                                    {{ chosenCard.uprightKeywords }}
                                 </h5>
                             </div>
                             <hr>
@@ -44,7 +44,7 @@
                                 <figure>
                                     <blockquote class="blockquote">{{ chosenCard.description }}</blockquote>
                                     <figcaption class="blockquote-footer">
-                                        Suite: <cite title="Source Title">{{ chosenCard.suite }}</cite>
+                                        Suite: <cite title="Source Title"></cite>
                                       </figcaption>
                                 </figure>
                                 
@@ -53,12 +53,8 @@
                             <div class="card text-center reading">
                                 <div class="card-body">
                                     <p class="card-text">
-                                    <h2>~ Upright ~</h2>
+                                    <h2>~ Meaning ~</h2>
                                     {{ chosenCard.upright }}
-                                    </p>
-                                    <p class="card-text">
-                                    <h2>~ Reversed ~</h2>
-                                    {{ chosenCard.reversed }}
                                     </p>
                                 </div>
                             </div>
