@@ -1,7 +1,6 @@
 var app = new Vue({
     el: "#app",
     data: {
-		show: false,
         cards: [
 	    {
 		"name": "The Fool",
@@ -789,7 +788,6 @@ var app = new Vue({
         },
         methods : {
             getCard() {
-				this.show = !this.show
 				this.seen = !this.seen
                 var chosenCard = Math.floor(Math.random() * this.cards.length);
                 this.chosenCard = this.cards[chosenCard];
