@@ -13,67 +13,67 @@
 
 <body>
     <div id="app">
-        <div class="container-fluid text-center">
+        <div class="container text-center">
             <h1 class="display-1">Tarot A Day</h1>
             <p class="lead alert alert-light">"Think of a question before you pick a card."</p>
             <button class="btn btn-custom btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
             <transition name="fade">
-            <div id="onecardreading" v-if="seen">
-
-                <hr>
-                <div class="row">
-                    <h1 class="card-title">~ {{ chosenCard.name }} ~</h2>
-                        <hr>
-                       <p class="lead">{{ chosenCard.description }}</p>
-                       <hr>
-                    <div class="col-sm-4 ">
-                        
-                        <div class="card reading">
-                            <strong>Suite</strong>
-                            <h5>
-                                {{ chosenCard.suite }}
-                            </h5>
-                            <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
-                            <div class="card-body">
-                                <hr>
-                                <strong>Upright</strong> 
+                <div id="onecardreading" v-if="seen">
+                    <hr>
+                    <div class="row">
+                        <h1>~ {{ chosenCard.name }} ~</h2>
+                            <hr>
+                            <div class="col">
+                                <strong>~ Upright ~</strong>
                                 <br>
                                 <h5>{{ chosenCard.uprightKeywords }}</h5>
-                                <hr>
-                                <strong>Reversed</strong>
+                            </div>
+                            <div class="col">
+                                <strong>~ Reversed ~</strong>
                                 <br>
                                 <h5>
-                                  {{ chosenCard.reversedKeywords }}
+                                    {{ chosenCard.reversedKeywords }}
                                 </h5>
-                                <hr>
-   
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="card text-center reading">
-                            <div class="card-body">
-                                <p class="card-text">
+                            <hr>
+                            <div class="col-sm-4">
+                                <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name"
+                                    style="width: 10rem">
+                            </div>
+                            <div class="col-sm-8">
+                                <figure>
+                                    <blockquote class="blockquote">{{ chosenCard.description }}</blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Suite: <cite title="Source Title">{{ chosenCard.suite }}</cite>
+                                      </figcaption>
+                                </figure>
+                                
+                            </div>
+
+                            <div class="card text-center reading">
+                                <div class="card-body">
+                                    <p class="card-text">
                                     <h2>~ Upright ~</h2>
-                                    {{ chosenCard.upright }} 
-                                </p>
-                                <p class="card-text">
+                                    {{ chosenCard.upright }}
+                                    </p>
+                                    <p class="card-text">
                                     <h2>~ Reversed ~</h2>
-                                    {{ chosenCard.reversed }} 
-                                </p>
+                                    {{ chosenCard.reversed }}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="footer">
-                                <p>&copy 2020 Tarot A Day - Made by   <a href="https://github.com/adrianlimws" target="blank">Adrian Matsumoto</a> </p>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer">
+                                        <p>&copy 2020 Tarot A Day - Made by <a href="https://github.com/adrianlimws"
+                                                target="blank">Adrian Matsumoto</a> </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </transition>
+            </transition>
         </div>
     </div>
 
@@ -84,29 +84,37 @@
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
-    html,body, p {
+    html,
+    body,
+    p {
         font-family: 'Crimson Text', serif;
         font-size: 20px;
-}
-.btn-custom {
-    color: #efefef;
-    background-color: #000000;
-    border-color: #37678b;
-}
-.btn:hover {
-    color: #1d1d1d; 
-    background-color: #efefef;
-}
-.card {
-    border: none;
-}
+    }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
+    .btn-custom {
+        color: #efefef;
+        background-color: #543f3f;
+        border-color: #37678b;
+    }
+
+    .btn:hover {
+        color: #efefef;
+        background-color: #4c2f2f;
+    }
+
+    .card {
+        border: none;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
+    }
 </style>
 
 </html>
