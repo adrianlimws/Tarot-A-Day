@@ -4,61 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="vue.js"></script>
     <title>Tarot A Day - VueJS mini project</title>
 </head>
 
 <body>
     <div id="app">
-        <div class="container">
-            <h1 class="title text-center">Tarot A Day</h1>
+        <div class="container-fluid text-center">
+            <h1 class="display-1">Tarot A Day</h1>
+            <p class="lead alert alert-light">"Think of a question before you pick a card."</p>
+            <button class="btn btn-custom btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
+            <transition name="fade">
+            <div id="onecardreading" v-if="seen && show">
 
-            <button class="btn btn-info btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
-
-            <hr>
-            <div class="row">
-                <div class="col-sm-4 ">
-                    <div class="card reading">
-                        <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
-                        <div class="card-body">
-                            <hr>
-                            <strong>Upright :</strong> {{ chosenCard.uprightKeywords }}
-                            <hr>
-                           <strong>Reversed :</strong> {{ chosenCard.reversedKeywords }}
-                            <hr>
-                            <strong>Suite:</strong> {{ chosenCard.suite }}
+                <hr>
+                <div class="row">
+                    <h1 class="card-title">~ {{ chosenCard.name }} ~</h2>
+                        <hr>
+                       <p class="lead">{{ chosenCard.description }}</p>
+                       <hr>
+                    <div class="col-sm-4 ">
+                        
+                        <div class="card reading">
+                            <strong>Suite</strong>
+                            <h5>
+                                {{ chosenCard.suite }}
+                            </h5>
+                            <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name">
+                            <div class="card-body">
+                                <hr>
+                                <strong>Upright</strong> 
+                                <br>
+                                <h5>{{ chosenCard.uprightKeywords }}</h5>
+                                <hr>
+                                <strong>Reversed</strong>
+                                <br>
+                                <h5>
+                                  {{ chosenCard.reversedKeywords }}
+                                </h5>
+                                <hr>
+   
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card text-center reading">
-                        <h1 class="card-title">{{ chosenCard.name }}</h2>
-
-                        <div class="card-body">
-                            <p class="card-text">
-                                <hr>
-                            <h5>Description</h5>
-                            <hr>
-                            {{ chosenCard.description }}</p>
-                            <hr>
-                            <p class="card-text">
-                            <h5>Upright Meaning</h5>
-                            <hr>
-                            {{ chosenCard.upright }} </p>
-                            <hr>
-                            <p class="card-text">
-                            <h5>Reversed Meaning</h5>
-
-                            <hr>
-                            {{ chosenCard.reversed }} </p>
+                    <div class="col-sm-8">
+                        <div class="card text-center reading">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <h2>~ Upright ~</h2>
+                                    {{ chosenCard.upright }} 
+                                </p>
+                                <p class="card-text">
+                                    <h2>~ Reversed ~</h2>
+                                    {{ chosenCard.reversed }} 
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-footer reading">
-                            Tarot A Day - Made by Adrian Matsumoto
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer">
+                                <p>&copy 2020 Tarot A Day - Made by   <a href="https://github.com/adrianlimws" target="blank">Adrian Matsumoto</a> </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </transition>
         </div>
     </div>
 
@@ -66,28 +81,32 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 
-<style>
-    html, body {
-        background: url("./img/background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
+<style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
-    .title {
-        color: azure;
-    }
-    .card {
-        border: none;
-    }
-    .card-img-top {
-        width: auto;
-    }
+    html,body, p {
+        font-family: 'Crimson Text', serif;
+        font-size: 20px;
+}
+.btn-custom {
+    color: #efefef;
+    background-color: #000000;
+    border-color: #37678b;
+}
+.btn:hover {
+    color: #1d1d1d; 
+    background-color: #efefef;
+}
+.card {
+    border: none;
+}
 
-    .reading, h1, h5, p {
-        color: rgba(250, 250, 250, 0.884);
-        background-color: transparent;
-    }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
 
 </html>
