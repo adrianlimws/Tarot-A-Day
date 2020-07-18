@@ -790,7 +790,8 @@ var app = new Vue({
             getCard() {
 				this.seen = !this.seen
                 var chosenCard = Math.floor(Math.random() * this.cards.length);
-                this.chosenCard = this.cards[chosenCard];
+				this.chosenCard = this.cards[chosenCard];
+				this.seen = true
             }
         }
   })
