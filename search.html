@@ -13,50 +13,55 @@
 
 <body>
     <div id="app">
+
         <div class="container text-center">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./index.html">Pick a card</a>
+                    <a class="nav-link " href="./index.html">Pick a card</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./search.html">Search a card</a>
+                    <a class="nav-link active" aria-current="page" href="./search.html">Search a card</a>
                 </li>
             </ul>
+
             <h1 class="display-1">Tarot A Day</h1>
-            <p class="lead alert alert-light">"Think of a question before you pick a card."</p>
-            <button class="btn btn-custom btn-lg btn-block" @click="getCard" type="button">Pick a Card</button>
+            <p class="lead alert alert-light">"Search for the meaning of a card"</p>
+
+            <input class="form-control form-control-lg" type="text" 
+            v-model="search" placeholder="Search a card.." aria-label=".form-control-lg example">
+
             <transition name="fade">
-                <div id="onecardreading" v-if="seen">
+                <div id="onecardreading" v-if="seen" v-for="card in filteredCards">
                     <hr>
                     <div class="row">
-                        <h1>~ {{ chosenCard.name }} ~</h2>
+                        <h1>~ {{ card.name }} ~</h2>
                             <hr>
                             <div class="col">
                                 <strong>~ Suite ~</strong>
                                 <br>
-                                <h5>{{ chosenCard.suite }}</h5>
+                                <h5>{{ card.suite }}</h5>
                             </div>
                             <div class="col">
                                 <strong>~ Keywords ~</strong>
                                 <br>
                                 <h5>
-                                    {{ chosenCard.uprightKeywords }}
+                                    {{ card.uprightKeywords }}
                                 </h5>
                             </div>
                             <hr>
                             <div class="col-sm-4">
-                                <img :src="chosenCard.image" class="card-img-top" :alt="chosenCard.name"
+                                <img :src="card.image" class="card-img-top" :alt="card.name"
                                     style="width: 10rem">
                             </div>
                             <div class="col-sm-8">
-                                <blockquote class="blockquote">{{ chosenCard.description }}</blockquote>                               
+                                <blockquote class="blockquote">{{ card.description }}</blockquote>
                             </div>
 
                             <div class="card text-center reading">
                                 <div class="card-body">
                                     <p class="card-text">
                                     <h2>~ Meaning ~</h2>
-                                    {{ chosenCard.upright }}
+                                    {{ card.upright }}
                                     </p>
                                 </div>
                             </div>

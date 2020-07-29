@@ -1,6 +1,7 @@
 var app = new Vue({
     el: "#app",
     data: {
+		search:'',
         cards: [
 	    {
 		"name": "The Fool",
@@ -782,16 +783,26 @@ var app = new Vue({
 		"upright": "The Ace of Pentacles, like the other Aces of the Tarot, represents new beginnings, opportunities, and potential – and as a Pentacles card, these new beginnings correlate to the material world: finances, wealth, career, physical health and manifestation of your goals. You may receive a new job offer, an unexpected sum of money, a new business or investment opportunity may come your way, or you’ll have the chance to bring an idea to fruition. No matter the occasion, the Ace of Pentacles heralds a sense of prosperity and abundance in the material or financial areas of your life. It undoubtedly comes as a welcome invitation – but it is not a free ride. As with all Aces in the Tarot deck, this card illustrates the possibility of a new endeavour but does not guarantee its manifestation or success. That piece is up to you.	See the Ace of Pentacles as your ‘green light’. It marks the initial stages of manifesting your goals and assures you that you can truly achieve what you have set your mind to do. The world is your oyster and, through careful planning and determined effort, you can manifest your goals and desires. Your ideas are ready to turn into something tangible and real! This card encourages you to map out how you will achieve your ambitions, create targeted plans and get those actions underway. Keep your eyes open for chances to manifest your goals and realise your inner potential.	The Ace of Pentacles also symbolises wealth, not just for your bank account but in a holistic sense as well. You may discover opportunities to generate a new source of income or receive a financial gift or windfall. Or you may have a chance to create wealth in a broader sense – happiness, fulfilment, potential, and love. This Ace signifies abundance in all areas of your life. Enjoy it! Feel blessed and deserving of everything that comes your way. If you wish to amplify this feeling of prosperity, live by the Law of Attraction and send your positive energy and intent into the Universe so you will receive more in return.",
 		"reversed": "When the reversed Ace of Pentacles appears in a Tarot reading, you may feel hesitant about moving forward with an offer, invitation or opportunity, particularly one that relates to your career, finances or business. You may catch yourself second-guessing the timing or doubting whether you have what it takes to see it through. Don't move forward until you're ready. Assess the feasibility of your idea and its potential outcomes. Perform your due diligence and figure out if this opportunity is meant for you or not.	The Ace of Pentacles reversed may also be a warning that a financial opportunity – a pay raise, a new job, a loan, or a business offer – could fall through unexpectedly or the other party might retract it without explanation. As the saying goes, “Don’t count your chickens before they hatch!” So, if you get an offer, wait until the money is in your bank account before spending it.	Furthermore, the Ace of Pentacles reversed advises you to be very careful with your expenditures. When the card is inverted, the coin looks as though it's about to fall out of the magical hand. Now is not the time to get in over your head or take on any obligations with huge monthly repayments. Do not rely on the promise of a financial opportunity in the future (like a pay raise or a gift) either. Be pragmatic and allow a bit of ‘fat’ in your budgeting in case you are without employment or have a large and unexpected financial outlay. At times, the reversed Ace of Pentacles suggests that you are trying to manifest your goals but keep running into delays and other impediments. If you're having limited success, then you may need to revise your proposed approach. Do you need to realign your goals to something more realistic? Financial or other professional advice may be necessary to help you get back on track. If you are looking to start a new business or take up a new job offer, the reversed Ace of Pentacles warns of a significant risk due to lack of planning and foresight. Do not charge ahead without validating whether the market has a need for your services. Spend a bit more time in the planning stage and give ample consideration to the financial aspects of your new venture."
 	    }
-        ],
+		],
 		chosenCard: '',
 		seen: false
-        },
+		},
+
         methods : {
             getCard() {
 				this.seen = !this.seen
                 var chosenCard = Math.floor(Math.random() * this.cards.length);
 				this.chosenCard = this.cards[chosenCard];
 				this.seen = true
-            }
-        }
+			}
+		},
+
+		computed: {
+			filteredCards() {
+				this.seen = true
+					return this.cards.filter(card => {
+						return card.name.toLowerCase().includes(this.search.toLowerCase())
+					})
+				}
+		}
   })
