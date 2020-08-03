@@ -22,16 +22,29 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./search.html">Search a card</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./list.html">Browse cards</a>
+                </li>
             </ul>
 
             <h1 class="display-1">Tarot A Day</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="footer">
+                        <p>&copy 2020 Tarot A Day - Made by <a href="https://github.com/adrianlimws"
+                                target="blank">Adrian Matsumoto</a> </p>
+                    </div>
+                </div>
+            </div>
             <p class="lead alert alert-light">"Search for the meaning of a card"</p>
 
             <input class="form-control form-control-lg" type="text" 
             v-model="search" placeholder="Search a card.." aria-label=".form-control-lg example">
 
+
+
             <transition name="fade">
-                <div id="onecardreading" v-if="seen" v-for="card in filteredCards">
+                <div id="onecardreading" v-if="search !== ''" v-for="card in filteredCards">
                     <hr>
                     <div class="row">
                         <h1>~ {{ card.name }} ~</h2>
@@ -65,18 +78,10 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <div class="container">
-                                <div class="row">
-                                    <div class="footer">
-                                        <p>&copy 2020 Tarot A Day - Made by <a href="https://github.com/adrianlimws"
-                                                target="blank">Adrian Matsumoto</a> </p>
-                                    </div>
-                                </div>
-                            </div>
                     </div>
                 </div>
             </transition>
+
         </div>
     </div>
 
